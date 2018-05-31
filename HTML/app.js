@@ -18,10 +18,13 @@ numeros.forEach((numero) => {
     }
 })
 */
+
+let numero = 3;
+
 for (let i = 1; i <= 1; i++) {
     for (let o = i; o <= 10; o++) {
 
-        console.log(o + " x", 7, "=", 7 * o);
+        console.log(o + " x", numero, "=", numero * o);
 
     }
 }
