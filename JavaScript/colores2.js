@@ -23,5 +23,7 @@ for (let key in colors2) {
     if (colors2[key][1] > 240) {
 
         console.log(key + "   " + colors2[key]);
+        //Si se manda llamar la pura variable, devuelve el nombre de la variable en la iteracion actual.
+        //Si se manda llamar el arreglo con la variable como calor, entonces devuelve el contenido de la variable en la iteracion actual.
     }
 }
