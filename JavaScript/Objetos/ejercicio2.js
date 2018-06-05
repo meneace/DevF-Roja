@@ -26,11 +26,19 @@ class persona {
 }
 
 //Falta crear la funcion de RFC en donde se soicite mes dia y año
-
-
-class datos extends persona {
-    constructor(nombre, apellidoPaterno, apellidoMaterno, edad, sexo, peso, altura) {
+class nacionalidad extends persona {
+    constructor(nombre, apellidoPaterno, apellidoMaterno, edad, sexo, peso, altura, pais) {
         super(nombre, apellidoPaterno, apellidoMaterno, edad, sexo, peso, altura);
+        this.pais = pais;
+    }
+    country() {
+        console.log(`Soy de ${this.pais}`)
+    }
+}
+
+class datos extends nacionalidad {
+    constructor(nombre, apellidoPaterno, apellidoMaterno, edad, sexo, peso, altura, pais) {
+        super(nombre, apellidoPaterno, apellidoMaterno, edad, sexo, peso, altura, pais);
 
 
     }
@@ -39,12 +47,12 @@ class datos extends persona {
         this.mes = mes;
         this.año = año;
         this.name();
+        this.country();
         this.imc();
         this.mayor();
-        console.log(`Mi RFC es ${this.apellidoPaterno.substring(0, 2).toUpperCase()}${this.apellidoMaterno.substring(0, 1)}${this.nombre.substring(0, 1)}${año.toString().substring(2, 4)}${mes}${dia}`);
+        console.log(`Mi RFC es ${this.apellidoPaterno.substring(0, 2).toUpperCase()}${this.apellidoMaterno.toUpperCase().substring(0, 1)}${this.nombre.toUpperCase().substring(0, 1)}${año.toString().substring(2, 4)}${mes}${dia}`);
     }
 }
 
-
-const Laura = new datos("Laura", "Luna", "Lopez", 31, 879076, 65, 1.75);
+const Laura = new datos("Laura", "Luna", "Lopez", 31, 879076, 65, 1.75, "México");
 Laura.rfc(21, 05, 1990);
